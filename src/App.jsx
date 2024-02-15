@@ -1,12 +1,18 @@
-
-
+import Home from "./Components/Home"
+import {Routes,Route,BrowserRouter} from "react-router-dom"
+import SinglePage from "./Components/SinglePage"
 function App() {
-
-
   return (
     <>
-      <h1 className="text-3xl">hello</h1>
-      gi t
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/:id" element={<SinglePage />} />
+      </Routes>
+    </BrowserRouter>
+    {/* <div>
+      <Home/>
+    </div> */}
     </>
   )
 }
